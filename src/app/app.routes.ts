@@ -4,6 +4,7 @@ import { Projects } from './projects/projects';
 import { Contact } from './contact/contact';
 import { Snake } from './snake/snake';
 import { Tetris } from './tetris/tetris';
+import { Blog } from './blog/blog';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -12,6 +13,7 @@ export const routes: Routes = [
     loadComponent: () => import('./home/home').then(m => m.Home)
   },
   { path: 'about', component: About },
+  { path: 'blog', component: Blog },
   { path: 'projects', component: Projects },
   { path: 'contact', component: Contact },
   { path: 'snake', component: Snake },
