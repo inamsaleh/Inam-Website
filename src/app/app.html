@@ -1,0 +1,25 @@
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a routerLink="/home" class="nav-logo">Inam Ahmad Saleh</a>
+    <ul class="nav-menu">
+      <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main-content">
+  <router-outlet />
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Inam Ahmad Saleh. All rights reserved.</p>
+    <p>Built with Angular</p>
+  </div>
+</footer>

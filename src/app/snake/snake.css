@@ -1,0 +1,347 @@
+.snake-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  min-height: calc(100vh - 200px);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+.game-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Nokia Phone Frame */
+.game-info {
+  display: flex;
+  justify-content: center;
+}
+
+.nokia-frame {
+  background: linear-gradient(145deg, #2c3e50, #34495e);
+  border-radius: 30px;
+  padding: 2rem 1.5rem;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  max-width: 480px;
+}
+
+.nokia-screen {
+  background: #9cb83c;
+  border: 8px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow:
+    inset 0 2px 10px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(156, 184, 60, 0.3);
+}
+
+.score-display {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: #0f380f;
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.score-item .label {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.score-item .value {
+  font-size: 1.5rem;
+  background: rgba(15, 56, 15, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: #9cb83c;
+}
+
+.game-canvas {
+  display: block;
+  border: 2px solid #0f380f;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.controls-hint {
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  color: #0f380f;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.controls-hint p {
+  margin: 0.25rem 0;
+}
+
+.game-over-text {
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Nokia Buttons */
+.nokia-buttons {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 8rem;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(145deg, #3d5a80, #2c4866);
+  border-radius: 50%;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dpad {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dpad-vertical,
+.dpad-horizontal {
+  position: absolute;
+  background: linear-gradient(145deg, #3d5a80, #2c4866);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dpad-vertical {
+  width: 40px;
+  height: 120px;
+  border-radius: 20px;
+}
+
+.dpad-horizontal {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.dpad-center {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(145deg, #2c4866, #1e3a5f);
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Game Description */
+.game-description {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.game-description h3 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.game-description p {
+  color: #6b7280;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.features,
+.tech-stack,
+.instructions {
+  margin-top: 2rem;
+}
+
+.features h4,
+.tech-stack h4,
+.instructions h4 {
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.features ul,
+.instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li,
+.instructions li {
+  color: #6b7280;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.features li::before,
+.instructions li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.instructions li strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .game-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .game-info {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .snake-container {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .nokia-frame {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+  }
+
+  .nokia-screen {
+    padding: 0.75rem;
+  }
+
+  .button-row {
+    gap: 6rem;
+  }
+
+  .game-description {
+    padding: 1.5rem;
+  }
+
+  .game-description h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .nokia-frame {
+    padding: 1rem 0.5rem;
+  }
+
+  .score-item .value {
+    font-size: 1.25rem;
+    min-width: 50px;
+  }
+
+  .button-row {
+    gap: 4rem;
+  }
+
+  .button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dpad {
+    width: 100px;
+    height: 100px;
+  }
+
+  .dpad-vertical {
+    width: 35px;
+    height: 100px;
+  }
+
+  .dpad-horizontal {
+    width: 100px;
+    height: 35px;
+  }
+}

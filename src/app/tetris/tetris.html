@@ -1,0 +1,119 @@
+<div class="tetris-container">
+  <h2 class="section-title">Tetris</h2>
+
+  <div class="game-wrapper">
+    <div class="game-area">
+      <div class="game-frame">
+        <div class="game-screen">
+          <canvas #gameCanvas class="game-canvas"></canvas>
+          @if (isPaused()) {
+            <div class="pause-overlay">
+              <h3>PAUSED</h3>
+              <p>Press P to Resume</p>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="game-stats">
+        <div class="stat-card">
+          <span class="stat-label">SCORE</span>
+          <span class="stat-value">{{ score() }}</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">HIGH SCORE</span>
+          <span class="stat-value">{{ highScore() }}</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">LEVEL</span>
+          <span class="stat-value">{{ level() }}</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">LINES</span>
+          <span class="stat-value">{{ lines() }}</span>
+        </div>
+      </div>
+
+      <div class="controls-info">
+        <h4>Controls:</h4>
+        <div class="control-item">
+          <span class="key">←→</span>
+          <span>Move Left/Right</span>
+        </div>
+        <div class="control-item">
+          <span class="key">↓</span>
+          <span>Soft Drop</span>
+        </div>
+        <div class="control-item">
+          <span class="key">↑</span>
+          <span>Rotate</span>
+        </div>
+        <div class="control-item">
+          <span class="key">SPACE</span>
+          <span>Hard Drop</span>
+        </div>
+        <div class="control-item">
+          <span class="key">P</span>
+          <span>Pause/Resume</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-description">
+      <h3>Classic Tetris</h3>
+      <p>
+        Experience the timeless puzzle game that has captivated players for decades. Arrange falling
+        tetrominoes to create complete horizontal lines and watch them disappear. The game speeds up
+        as you progress through levels, challenging your reflexes and strategic thinking.
+      </p>
+
+      <div class="features">
+        <h4>Features:</h4>
+        <ul>
+          <li>Classic Tetris gameplay with 7 unique tetromino shapes</li>
+          <li>Progressive difficulty with increasing speed</li>
+          <li>Score system with combo multipliers</li>
+          <li>Level progression every 10 lines cleared</li>
+          <li>High score persistence using localStorage</li>
+          <li>Pause/resume functionality</li>
+          <li>Smooth animations and modern UI</li>
+          <li>Hard drop for quick placement</li>
+        </ul>
+      </div>
+
+      <div class="scoring">
+        <h4>Scoring System:</h4>
+        <ul>
+          <li><strong>Single Line:</strong> 100 × Level</li>
+          <li><strong>Double Lines:</strong> 300 × Level</li>
+          <li><strong>Triple Lines:</strong> 500 × Level</li>
+          <li><strong>Tetris (4 Lines):</strong> 800 × Level</li>
+          <li><strong>Hard Drop:</strong> +2 points per row</li>
+        </ul>
+      </div>
+
+      <div class="tech-stack">
+        <h4>Built With:</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">HTML5 Canvas</span>
+          <span class="tech-tag">CSS3</span>
+          <span class="tech-tag">Game Dev</span>
+        </div>
+      </div>
+
+      <div class="tips">
+        <h4>Pro Tips:</h4>
+        <ul>
+          <li>Always leave space for the I-piece (the long one)</li>
+          <li>Try to maintain a flat surface for easier stacking</li>
+          <li>Use hard drop (SPACE) to quickly place pieces</li>
+          <li>Plan ahead - think about where the next piece will fit</li>
+          <li>Clear multiple lines at once for higher scores</li>
+          <li>Don't panic when the speed increases - stay focused!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

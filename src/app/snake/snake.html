@@ -1,0 +1,90 @@
+<div class="snake-container">
+  <h2 class="section-title">Snake Game</h2>
+
+  <div class="game-wrapper">
+    <div class="game-info">
+      <div class="nokia-frame">
+        <div class="nokia-screen">
+          <div class="score-display">
+            <div class="score-item">
+              <span class="label">SCORE</span>
+              <span class="value">{{ score() }}</span>
+            </div>
+            <div class="score-item">
+              <span class="label">HIGH</span>
+              <span class="value">{{ highScore() }}</span>
+            </div>
+          </div>
+
+          <div class="canvas-wrapper">
+            <canvas #gameCanvas class="game-canvas"></canvas>
+          </div>
+
+          <div class="controls-hint">
+            <p>Use Arrow Keys to move</p>
+            @if (gameOver()) {
+              <p class="game-over-text">Press SPACE to restart</p>
+            }
+          </div>
+        </div>
+
+        <div class="nokia-buttons">
+          <div class="button-row">
+            <div class="button"></div>
+            <div class="button"></div>
+          </div>
+          <div class="dpad">
+            <div class="dpad-vertical"></div>
+            <div class="dpad-horizontal"></div>
+            <div class="dpad-center"></div>
+          </div>
+          <div class="button-row">
+            <div class="button"></div>
+            <div class="button"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-description">
+      <h3>Classic Nokia Snake</h3>
+      <p>
+        Relive the nostalgia of the classic Snake game that made Nokia phones legendary in the late 90s and early 2000s.
+        This recreation captures the authentic feel of the original game with its iconic green screen and pixel-perfect gameplay.
+      </p>
+
+      <div class="features">
+        <h4>Features:</h4>
+        <ul>
+          <li>Authentic Nokia-style green monochrome display</li>
+          <li>Classic snake movement and controls</li>
+          <li>Score tracking with high score persistence</li>
+          <li>Responsive keyboard controls</li>
+          <li>Retro pixel-perfect graphics</li>
+          <li>Progressive difficulty as snake grows</li>
+        </ul>
+      </div>
+
+      <div class="tech-stack">
+        <h4>Built With:</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">HTML5 Canvas</span>
+          <span class="tech-tag">CSS3</span>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h4>How to Play:</h4>
+        <ul>
+          <li><strong>Arrow Keys:</strong> Control snake direction (Up, Down, Left, Right)</li>
+          <li><strong>Goal:</strong> Eat the food (blinking square) to grow longer</li>
+          <li><strong>Avoid:</strong> Running into walls or your own body</li>
+          <li><strong>Score:</strong> Each food item is worth 10 points</li>
+          <li><strong>Restart:</strong> Press SPACE after game over</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
